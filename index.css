@@ -48,6 +48,25 @@ header > div {
         The <h2> inside the section must (on screens with a minimum width of 800px) have a font size of 6em
 */
 
+#flexbox {
+    display: flex;
+    flex-direction: column;
+}
+  
+#canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+    #flexbox h2 {
+      font-size: 6em;
+    }
+}
+
+
+
 /*       
     <section id="grid">
 
