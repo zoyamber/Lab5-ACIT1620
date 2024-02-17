@@ -21,15 +21,14 @@ header > div {
     gap: 1em;
   }
 
-  header > div > div {
+header > div > div {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
-    gap: 2em;
 }
 
 .texts{
-    column-gap: 2rems;
+    column-gap: 2rem;
 }
 
 @media(min-width: 800px){
@@ -38,15 +37,6 @@ header > div {
         grid-template-columns: 1fr 1fr;
     }
 }
-/*
-    <section id="flexbox">
-
-        The <section> element with id 'flexbox' must be display: flex with its child elements laid out in a column
-
-        The <div> with id 'canvas' inside the section must be display: flex with its single child element vertically and horizontally centered
-
-        The <h2> inside the section must (on screens with a minimum width of 800px) have a font size of 6em
-*/
 
 #flexbox {
     display: flex;
@@ -65,25 +55,31 @@ header > div {
     }
 }
 
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 250px 250px 250px;
+}
 
+#grid > *{
+    padding: 1em;
+    
+}
 
-/*       
-    <section id="grid">
+#grid h2{
+    grid-column: span 3;
+    text-align: right;
+    font-size: 6em;
+}
 
-        NOTE: All of the styles noted below must *only* be applied on screens with a minimum width of 800px
+#grid p:first-child{
+    grid-column: span 2;
+}
 
-        The <section> element with id 'grid' must be a grid with 5 rows (the first having height 'auto', the remaining four having height 250px) and three columns of 1fr
-
-        All direct children of the section must have 1em of padding on all sides
-
-        The <h2> element inside the section must span three columns, have its text aligned right, and have font size 6em
-
-        The first <p> element inside the section must span two columns
-
-        The <div> inside the section must start at column two and span two columns, start at row three and span three columns
-*/
-
-
+#grid div{
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 3;
+}
 
 
 /*
