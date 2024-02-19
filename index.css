@@ -62,8 +62,7 @@ header > div > div {
 }
 
 #grid > *{
-    padding: 1em;
-    
+    padding: 1em; 
 }
 
 #grid h2{
@@ -82,13 +81,25 @@ header > div > div {
 }
 
 
-/*
-    <footer>
+footer div{
+    display: flex;
+}
 
-        The <div> inside the footer must be display: flex, with its child elements laid out in a column on screens with a width below 800px, and laid out in a row on screens with a minimum width of 800px.
+footer{
+    padding: 1em;
+}
 
-        On screens wider than 800px, the <div> must additionally have 4em of padding on all sides, and the image and text inside must swap positions (image on top on smaller screens, image on the right-hand side on larger screens)
-
-        On screens wider than 800px, the <p> element inside the div must additionally have no top margin
-
-*/
+@media screen and (min-width: 800px){
+    footer div{
+        padding: 4em;
+        flex-direction: row;
+    }
+    
+    footer img{
+        justify-content: space-between;
+    }
+    
+    footer div p{
+        margin-top: 0;
+    }
+}
